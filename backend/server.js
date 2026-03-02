@@ -9,11 +9,9 @@ const { spawn } = require('child_process');
 const os = require('os');
 
 const app = express();
-const PORT = 5001;
-
+const PORT = process.env.PORT || 5001;
 // Middleware
-app.use(cors());
-app.use(express.json());
+app.use(cors({ origin: 'https://cipherthreads.vercel.app' }));app.use(express.json());
 app.use('/uploads', express.static('uploads'));
 app.use('/processed', express.static('processed'));
 
