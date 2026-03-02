@@ -1,2 +1,5 @@
 # Ignore all node_modules folders recursively
 **/node_modules/
+.DS_Store
+backend/uploads/
+backend/processed/
