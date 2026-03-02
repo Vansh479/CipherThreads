@@ -2,8 +2,7 @@ import React, { useState, useRef } from 'react';
 import { Upload, FileText, Lock, Unlock, Download, BarChart3, Clock, Cpu, Zap } from 'lucide-react';
 import { XAxis, YAxis, CartesianGrid, Tooltip, Legend, BarChart, Bar, ResponsiveContainer } from 'recharts';
 
-const API_BASE_URL = 'http://localhost:5001';
-
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5001';
 export default function FileEncryptorApp() {
   const [files, setFiles] = useState([]);
   const [uploadedFiles, setUploadedFiles] = useState([]);
